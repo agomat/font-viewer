@@ -1,0 +1,12 @@
+<div>
+  <div class="list-group">
+
+      <div v-for="font in fonts" class="panel panel-primary">
+        <div class="panel-heading">{{font.name}}</div>
+        <div class="panel-body"><img class="img-responsive" data-id="{{font.id}}" src="http://www.decalfont.com/fonts/previews/{{font.id}}/{{font.id}}-0-0.png" alt="" /></div>
+      </div>
+      
+  </div>
+
+    <a v-link="{ path: '/categories' }">&laquo; Back to categories</a>
+</div>

@@ -1,0 +1,24 @@
+<div>
+
+    <div class="page-header">
+        <h1>Categorie</h1>
+    </div>
+
+    <div class="row">
+      <template v-for="category in data.categories">
+        <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+          <a v-link="{ name: 'category', params: { id: category.id }}">{{category.name}}</a>
+        </div>
+      </template>
+    </div>
+
+    <div class="page-header">
+        <h1>Caratteri recenti</h1>
+    </div>
+
+    <div v-for="font in data.fonts" class="panel panel-primary">
+      <div class="panel-heading">{{font.name}}</div>
+      <div class="panel-body"><img class="img-responsive" data-id="{{font.id}}" src="http://www.decalfont.com/fonts/previews/{{font.id}}/{{font.id}}-0-0.png" alt="" /></div>
+    </div>
+
+</div>
